@@ -7,6 +7,7 @@ A minimal **Laravel 13** example app that demonstrates the [`nordkit/svea`](http
 It's intentionally small — one cart, one catalog, one webhook handler — so the focus stays on **how the SDK is wired into Laravel**, not on building an e-commerce app.
 
 [![SDK](https://img.shields.io/badge/SDK-nordkit%2Fsvea-1e3a8a?style=flat-square)](https://github.com/nordkit/svea)
+[![Tests](https://img.shields.io/github/actions/workflow/status/nordkit/svea-example-laravel/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/nordkit/svea-example-laravel/actions/workflows/tests.yml)
 [![Laravel](https://img.shields.io/badge/Laravel-13-red?style=flat-square)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.3%2B-777bb4?style=flat-square)](https://www.php.net/)
 
