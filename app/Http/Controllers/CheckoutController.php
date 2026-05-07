@@ -53,9 +53,9 @@ final class CheckoutController extends Controller
             $order->addRow(fn ($row) => $row
                 ->sku($sku)
                 ->name($product['name'])
-                ->quantity($qty)
-                ->unitPrice($product['price'])  // major units — SDK converts to öre
-                ->vatPercent($product['vat'])
+                ->quantity($qty * 100)          // minor units: 1 unit = 100
+                ->unitPrice($product['price'] * 100)  // minor units: 1 SEK = 100 öre
+                ->vatPercent($product['vat'] * 100)   // minor units: 25% = 2500
             );
         }
 
@@ -63,8 +63,9 @@ final class CheckoutController extends Controller
             $response = Svea::checkout()->create($order);
         } catch (SveaApiException $e) {
             Log::error('Svea checkout creation failed', [
-                'status' => $e->statusCode,
+                'status'  => $e->statusCode,
                 'message' => $e->getMessage(),
+                'error'   => $e->sveaError,
             ]);
 
             return redirect()->route('cart.index')->with('error', 'Could not start checkout: '.$e->getMessage());
@@ -115,5 +116,4 @@ final class CheckoutController extends Controller
         ]);
     }
 }
-
 
