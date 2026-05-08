@@ -66,7 +66,7 @@ SVEA_ENVIRONMENT=test
 SVEA_WEBHOOK_SECRET=any-random-string-for-now
 ```
 
-> Need test credentials? See [Svea's "Become a customer"](https://www.svea.com/become-a-customer) page or contact your Svea integration manager.
+> Need test credentials or more info about Svea e-commerce payment services? See [Svea E-handel betal-losningar](https://www.svea.com/sv-se/foretag/betallosningar/e-handel) or contact your Svea integration manager.
 
 ### 3. Run
 
